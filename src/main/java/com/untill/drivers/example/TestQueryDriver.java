@@ -126,7 +126,7 @@ public class TestQueryDriver implements IDriver, IEft {
 			someJob(3, guid);  
 			ctx.getProgress().showQuery(guid, QUERY_ARE_YOU_SURE, ProgressQueryType.YES_NO, "Are you a sure?");
 			String answer = waitForInput(20, guid, QUERY_ARE_YOU_SURE);
-			if ("y".equals(answer)) {
+			if ("yes".equals(answer)) {
 				ctx.getProgress().showProgressMessage(guid, "Completing request");
 				someJob(6, guid);  
 				return new EftResult.Builder().setTransactionResult(EftTransactionResult.SUCCESS).build();
